@@ -1,0 +1,71 @@
+{%extends 'base.html'%}
+{% load bootstrap3 %}
+{% load static %}
+{% block content%}
+
+<div class="container">
+	<div class="row">
+		
+		<div class="col-md-7">
+			<div class="thumbnail">
+				<img src="{{image.image.url}}">
+				
+					<div class="panel-body">
+						 	<a href="{% url 'likePost' image.id %}">
+			      		 	{%if is_liked%}
+				      		 <i class="fas fa-comment" style="font-size:25px;padding-left: 10px"></i>
+				      		 {%else%}
+				      		 <i class="far fa-comment" style="font-size:25px;padding-left: 10px"></i>
+				      		 {%endif%}
+			      		</a>
+			      		<span style="font-size:25px;">{{image.likes.count}}</span>
+			      		{% if image.profile.id == user.id %}
+			      		<a href="{% url 'editPost' image.id %}" class="btn btn-success btn-sm pull-right">Edit</a>
+			      		{%endif%}
+					</div>
+				
+				
+			</div>
+		</div>
+		<div class="col-md-5">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">
+			    	<div class="row">
+						<div class="col-md-2">
+							<a href="{% url 'profile' image.profile.id %}"><img class="img-responsive img-circle" src="{{image.user_profile.profile_pic.url}}" alt="" style="width:35px; height:35px"></a>
+						</div>
+						<div class="col-md-10" style="padding-top:11px">
+							{{image.profile.username}}
+						</div>
+					</div>
+			    </h3>
+			  </div>
+			  <div class="panel-body">
+			  	<strong>{{image.profile.username}}</strong>
+			     {{image.image_caption}}
+			     {%for comment in comments%}
+				<p><strong><a href="{%url 'profile' comment.profile.id %}">{{comment.profile.username}}</a></strong> :
+				{{comment.comment}}</p>
+				{%endfor%}
+				<hr>
+				<form  action="{% url 'single' image.id%}" method="post">
+	        		{%csrf_token%}
+	        		{% bootstrap_form form%}
+	        		<input type="submit" class="btn btn-sm btn-primary" name="" value="Comment">
+	    		</form>
+			  </div>
+
+			</div>
+		</div>
+	
+
+	</div>
+</div>
+
+
+
+{%endblock%}
+
+
+
