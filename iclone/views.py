@@ -17,7 +17,7 @@ def index(request):
 	return render(request,'index.html',{"images":images,"title":title})
 def timeline(request):
 	'''
-	Method that fetches imges from all the users that the current logged in user follows only
+	Method that fetches images from all the users that the current logged in user follows only
 	'''
 	follows = Follow.objects.filter(user_from = request.user.id)
 	images = Image.objects.filter(profile = request.user.following.user_to)
