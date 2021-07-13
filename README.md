@@ -51,8 +51,7 @@ Single post:
 ## Testing the Application
 * To run the tests for the class file and check if it functions well:
 
-        $ cd instagram
-        $ python3 tests.py
+        $ python3 manage.py test iclone
         
 
 
