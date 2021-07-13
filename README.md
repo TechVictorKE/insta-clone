@@ -2,7 +2,7 @@
 A clone of the website for the popular photo app Instagram.
 
 ## Live Link
-[View Site]()
+[View Site](https://instaclone-django.herokuapp.com/)
 
 ## Screenshot
 
