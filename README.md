@@ -33,8 +33,8 @@ Single post:
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
 | Load website | **Website url** | Sign up/Log in|
-| Show posts | ** Click on post ** | See the post close up|
-| Search user | ** Username ** | Profile picture with username that leads to user's profile|
+| Show posts | **Click on post** | See the post close up|
+| Search user | **Username** | Profile picture with username that leads to user's profile|
 
 
 
