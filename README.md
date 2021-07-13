@@ -7,19 +7,19 @@ A clone of the website for the popular photo app Instagram.
 ## Screenshot
 
 Home:
-<img src="">
+<img src="https://github.com/TechVictorKE/insta-clone/blob/master/static/images/home.png">
 
 Profile:
-<img src="">
+<img src="https://github.com/TechVictorKE/insta-clone/blob/master/static/images/profile.png">
 
 Update profile:
-<img src="">
+<img src="https://github.com/TechVictorKE/insta-clone/blob/master/static/images/update-profile.png">
 
 Create post:
-<img src="">
+<img src="https://github.com/TechVictorKE/insta-clone/blob/master/static/images/create-post.png">
 
 Single post:
-<img src="">
+<img src="https://github.com/TechVictorKE/insta-clone/blob/master/static/images/single-post.png">
 
 ## User Stories
 
